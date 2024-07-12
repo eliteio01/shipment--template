@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en" >
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,  minimum-scale=0.8, maximum-scale = 0.8, user-scalable = no , shrink-to-fit=no">
+    <meta name="csrf-token" content="t3E5OgGW84LUGztXKUZFuaAtjyM9mmfSQJCzG2Qa" />
+    <link rel="shortcut icon" href="images/default/favicon.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="backend/vendor/bootstrap-five/bootstrap.min.css">
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link href="backend/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="backend/libs/css/style.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="backend/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="backend/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="backend/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="backend/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="backend/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="backend/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="backend/libs/css/datepicker.min.css">
+    <link rel="stylesheet" href="backend/libs/css/custom.css">
+    <link rel="stylesheet" href="backend/css/custom.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.5.1/css/flag-icons.min.css" /> 
+    <link rel="stylesheet" href="backend/vendor/toastr/toastr.min.css">
+    <!-- push target to head -->
+        <title></title>
+</head>
+<body >
+    <!-- main wrapper -->
+    <div class="dashboard-main-wrapper login-dashboard-main-wrapper">
+
+ 
+        <div class="splash-container">
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="card auth-boxs">
+                            <div class="card-header text-center">
+                                <a href="index.html" class="navbar-brand">
+                                    <img class="logo-img" src="images/default/logo.png"  class="logo" alt="logo">
+                                </a>
+                                <span class="splash-description">Please enter your user information.</span>
+                                </div>
+                            <div class="card-body">
+                                <form method="POST" action="https://apps.Elite technologiescom/login">
+                                    <input type="hidden" name="_token" value="t3E5OgGW84LUGztXKUZFuaAtjyM9mmfSQJCzG2Qa" autocomplete="off">                                    <div class="form-group">
+                                        <input id="email" type="text" class="form-control form-control-lg " name="email" required autocomplete="email" autofocus  placeholder="Enter Email or Mobile"
+                                        >
+                                                                            </div>
+                                    <div class="form-group">
+                                        <input id="password" type="password" class="form-control form-control-lg " name="password" required autocomplete="current-password" placeholder="Password"
+                                        >
+                                                                            </div>
+                                    <div class="form-group">
+                                        <label class="custom-control custom-checkbox">
+                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" 
+                                            >
+
+                                            <label class="form-check-label" for="remember">
+                                                Remember Me
+                                            </label>
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                                    <div class="text-center p-2">
+                                        <span><b>OR</b></span>
+                                    </div>
+                                                                            <div class="row ">
+                                                                                        <div class="col-sm-6 m-auto  ">
+                                                <a href="https://www.facebook.com/v3.3/dialog/oauth?client_id=facebook+client+id&amp;redirect_uri=https%3A%2F%2Fapps.Elite technologiescom%2Ffacebook%2Flogin&amp;scope=email&amp;response_type=code&amp;state=uqqHFXhsCYkX1G6QMv2rIvXXhVyyxrNzyMrtho3S" class="btn w-100 btn-social btn-primary mt-2" type="button"> <i class="fab fa-facebook"></i> Facebook</a>
+                                            </div>
+                                                                                                                                    <div class="col-sm-6 m-auto  ">
+                                                <a href="https://accounts.google.com/o/oauth2/auth?client_id=client+id&amp;redirect_uri=https%3A%2F%2Fapps.Elite technologiescom%2Fgoogle%2Flogin&amp;scope=openid+profile+email&amp;response_type=code&amp;state=VzcdBd4DpGiF8tfWO6kfR0W7WIqiiBDuvnZFj779" class="btn  w-100 btn-social btn-primary mt-2" type="button"><i class="fab fa-google"></i> Google</a>
+                                            </div>
+                                                                                    </div>
+                                     
+                                                                            <div class="text-center p-2">
+                                            <span><b>Demo Login</b></span>
+                                        </div>
+                                        <div class="row  ">
+                                            <div class="col-sm-6">
+                                                <button type="button" class="btn btn-primary btn-lg btn-block mt-2 demo-login-btn" id="demo-admin" data-email="admin@Elite technologiescom" data-password="12345678">Admin</button>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <button type="button" class="btn btn-primary btn-lg btn-block mt-2 demo-login-btn" id="demo-branch" data-email="branch@Elite technologiescom" data-password="12345678">Branch</button>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <button type="button" class="btn btn-primary btn-lg btn-block mt-2 demo-login-btn" id="demo-merchant" data-email="merchant@Elite technologiescom" data-password="12345678">Merchant</button>
+                                            </div>
+                                        </div>
+                                    
+                                </form>
+                            </div>
+                            <div class="card-footer bg-white p-0  ">
+                                <div class="card-footer-item card-footer-item-bordered">
+                                    <a href="merchant/sign-up.html" class="footer-link">Sign up here</a></div>
+                                <div class="card-footer-item card-footer-item-bordered">
+                                    <a href="password/reset.html" class="footer-link">Forgot Password</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 footer-img">
+                        <img class="img-responsive margin-t-20 " src="images/default/we-courier-process.png" width="100%" />
+                    </div>
+                </div>
+            </div>
+        </div>
+<style  >
+.login-dashboard-main-wrapper{
+    padding-top: 10%!important;
+}
+</style>
+</div>
+    <script src="backend/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <script src="backend/vendor/bootstrap-five/bootstrap.min.js"></script>
+    <script src="backend/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="backend/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="backend/libs/js/main-js.js"></script>
+    <script src="backend/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <script src="backend/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="backend/vendor/charts/morris-bundle/morris.js"></script>
+    <script src="backend/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="backend/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="backend/libs/js/datepicker.min.js"></script>
+    <script src="backend/libs/js/custom.js"></script>
+    <script src="backend/js/dynamic-modal.js"></script>
+    <script src="backend/js/lang.js"></script>
+    <script src="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script> 
+    <script src="backend/vendor/toastr/toastr.min.js"></script>
+    <script src="../www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
+    <script type="text/javascript">   
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+    <script>var yes = "Yes";</script>
+    <script>var cancel = "Cancel";</script>
+
+    <script type="text/javascript">
+        "use strict";
+        $(function(){
+            $('.demo-login-btn').click(function(){
+                $('#email').attr('value',$(this).data('email'));
+                $('#password').attr('value',$(this).data('password'));
+            });
+           
+        });
+    </script>
+
+<script type="text/javascript">
+    "use strict";
+    $(document).ready(function() {
+        var firebaseConfig = {
+            apiKey: "AIzaSyDCthiio0WgX1F2CiVlw1Z-kWOKYYi6vQI",
+            authDomain: "we-courier-81101.firebaseapp.com",
+            projectId: "we-courier-81101",
+            storageBucket: "we-courier-81101.appspot.com",
+            messagingSenderId: "151878495365",
+            appId: "1:151878495365:web:133d9bace19a4846260dec",
+            measurementId: "G-V1K1HVXD5G"
+        };
+
+            firebase.initializeApp(firebaseConfig);
+            const messaging = firebase.messaging();
+            startFCM();
+            function startFCM() {
+                messaging.requestPermission()
+                    .then(function () {
+                        return messaging.getToken()
+                    })
+                    .then(function (response) {
+                        var dataurl = ''
+                        if(dataurl == 1){
+                            $.ajax({
+                                url: 'https://apps.Elite technologiescom/store-token',
+                                type: 'POST',
+                                data: {
+                                    token: response
+                                },
+                                dataType: 'JSON',
+                                success: function (response) {
+                                    console.log(response);
+                                },
+                                error: function (error) {
+                                    console.log(error);
+                                },
+                            });
+                        }
+                    }).catch(function (error) {
+                    console.log(error);
+                });
+            }
+
+            messaging.onMessage(function(payload) {
+                console.log(payload.notification);
+                const title = payload.notification.title;
+                const options = {
+                    body: payload.notification.body,
+                    icon: payload.notification.icon,
+                };
+                Swal.fire({
+                    imageUrl:payload.notification.image,
+                    title: title,
+                    text: payload.notification.body,
+                    position: 'top',
+                    showOkButton: true,
+                    showCancelButton: true,
+                    confirmButtonText: yes,
+                    cancelButtonText: cancel,
+                }).then((result) => {
+                    if (result.isConfirmed){
+                        console.log('ok');
+                    }
+                })
+                new Notification(title, options);
+            });
+    });
+</script>
+
+    <script type="text/javascript"></script>
+</body>
+
+<!-- Mirrored from apps.Elite technologiescom/login by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jul 2024 19:49:41 GMT -->
+</html>
